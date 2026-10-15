@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цветовые модели: CMYK · RGB · HSV</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>Цветовые модели</h1>
+
+    <div class="preview-card">
+      <div class="color-preview" id="colorPreview"></div>
+      <div class="preview-controls">
+        <div class="field">
+          <label for="hexInput">HEX</label>
+          <input type="text" id="hexInput" value="#000000" maxlength="7" spellcheck="false">
+        </div>
+        <div class="field">
+          <label for="colorPicker">Палитра</label>
+          <input type="color" id="colorPicker" value="#000000">
+        </div>
+      </div>
+    </div>
+
+    <section class="model">
+      <h2>RGB</h2>
+      <div class="row">
+        <span class="label">R</span>
+        <input type="range" id="rgbRRange" class="slider" min="0" max="255" value="0">
+        <input type="number" id="rgbRNumber" class="number" min="0" max="255" value="0">
+      </div>
+      <div class="row">
+        <span class="label">G</span>
+        <input type="range" id="rgbGRange" class="slider" min="0" max="255" value="0">
+        <input type="number" id="rgbGNumber" class="number" min="0" max="255" value="0">
+      </div>
+      <div class="row">
+        <span class="label">B</span>
+        <input type="range" id="rgbBRange" class="slider" min="0" max="255" value="0">
+        <input type="number" id="rgbBNumber" class="number" min="0" max="255" value="0">
+      </div>
+    </section>
+
+    <section class="model">
+      <h2>CMYK</h2>
+      <div class="row">
+        <span class="label">C</span>
+        <input type="range" id="cmykCRange" class="slider" min="0" max="100" value="0">
+        <input type="number" id="cmykCNumber" class="number" min="0" max="100" value="0">
+      </div>
+      <div class="row">
+        <span class="label">M</span>
+        <input type="range" id="cmykMRange" class="slider" min="0" max="100" value="0">
+        <input type="number" id="cmykMNumber" class="number" min="0" max="100" value="0">
+      </div>
+      <div class="row">
+        <span class="label">Y</span>
+        <input type="range" id="cmykYRange" class="slider" min="0" max="100" value="0">
+        <input type="number" id="cmykYNumber" class="number" min="0" max="100" value="0">
+      </div>
+      <div class="row">
+        <span class="label">K</span>
+        <input type="range" id="cmykKRange" class="slider" min="0" max="100" value="0">
+        <input type="number" id="cmykKNumber" class="number" min="0" max="100" value="0">
+      </div>
+    </section>
+
+    <section class="model">
+      <h2>HSV</h2>
+      <div class="row">
+        <span class="label">H</span>
+        <input type="range" id="hsvHRange" class="slider" min="0" max="360" value="0">
+        <input type="number" id="hsvHNumber" class="number" min="0" max="360" value="0">
+      </div>
+      <div class="row">
+        <span class="label">S</span>
+        <input type="range" id="hsvSRange" class="slider" min="0" max="100" value="0">
+        <input type="number" id="hsvSNumber" class="number" min="0" max="100" value="0">
+      </div>
+      <div class="row">
+        <span class="label">V</span>
+        <input type="range" id="hsvVRange" class="slider" min="0" max="100" value="0">
+        <input type="number" id="hsvVNumber" class="number" min="0" max="100" value="0">
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
